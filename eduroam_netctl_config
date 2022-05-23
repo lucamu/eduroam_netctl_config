@@ -1,0 +1,19 @@
+Description='eduroam profile'
+Interface=%NAME OF YOUR WIRELESS INTERFACE%
+Connection=wireless
+Security=wpa-configsection
+ESSID=eduroam
+IP=dhcp
+WPAConfigSection=(
+	'ssid="eduroam"'
+    'key_mgmt=WPA-EAP'
+    'pairwise=CCMP'
+    'group=CCMP TKIP'
+    'eap=TTLS'
+    'ca_cert="%PATH TO YOUR CA CERTIFICATE%"'
+    'identity="%YOUR UNIVERSITY EMAIL"'
+    'altsubject_match="COPY FROM cat_installer.conf"'
+    'phase2="%COPY FROM cat_installer.conf%"'
+    'password="%YOUR WIFI PASSPHRASE%"'
+    'anonymous_identity="eduroam@%YOUR UNIVERSITY DOMAIN%"'
+)
